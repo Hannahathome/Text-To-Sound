@@ -2,12 +2,13 @@ import processing.sound.*;
 
 /*______________________________________________________________________________________________//
 This code was made by: 
+Hannah van Iterson - Ms student Industrial Design TU/eindhoven. 
+Bas van Rossem - Student at Hogeschool Utrecht
 
 Using examples from: 
 
 Using sound files from: 
 freesound.org
-youtube.com/
 
 2020 
 //______________________________________________________________________________________________*/
