@@ -1,5 +1,20 @@
 import processing.sound.*;
 
+/*______________________________________________________________________________________________//
+This code was made by: 
+
+Using examples from: 
+
+Using sound files from: 
+freesound.org
+youtube.com/
+
+2020 
+//______________________________________________________________________________________________*/
+
+
+
+
 // Init variables
 PFont font;
 String[] lines;
@@ -16,7 +31,7 @@ void setup() {
   
   lines = loadStrings("../Story.TXT");
   
-  background = new SoundFile(this, "../sounds/background.wav");
+  //background = new SoundFile(this, "../sounds/background.wav");
   
   sound_boxes = (SoundBox[]) append(sound_boxes, new SoundBox("../sounds/pig.wav", 0, 0, 100, 100));
   sound_boxes = (SoundBox[]) append(sound_boxes, new SoundBox("../sounds/pig.wav", 700, 700, 800, 800));
