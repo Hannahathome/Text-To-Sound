@@ -1,5 +1,6 @@
 import processing.sound.*;
 
+// Init variables
 PFont font;
 String[] lines;
 SoundBox[] sound_boxes = {};
