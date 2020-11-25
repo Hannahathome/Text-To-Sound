@@ -19,6 +19,7 @@ freesound.org
 // Init variables
 PFont font;
 String[] lines;
+TouchManager touch_manager;
 SoundBox[] sound_boxes = {};
 
 SoundFile background;
@@ -32,10 +33,14 @@ void setup() {
   
   lines = loadStrings("../Story.TXT");
   
+  touch_manager = new TouchManager();
+  MouseSource mouse = new MouseSource();
+  touch_manager.addSource(mouse);
+  
   //background = new SoundFile(this, "../sounds/background.wav");
   
-  sound_boxes = (SoundBox[]) append(sound_boxes, new SoundBox("../sounds/pig.wav", 0, 0, 100, 100));
-  sound_boxes = (SoundBox[]) append(sound_boxes, new SoundBox("../sounds/pig.wav", 700, 700, 800, 800));
+  sound_boxes = (SoundBox[]) append(sound_boxes, new SoundBox("../sounds/pig.wav", 0, 0, 100, 100, touch_manager));
+  sound_boxes = (SoundBox[]) append(sound_boxes, new SoundBox("../sounds/pig.wav", 700, 700, 800, 800, touch_manager));
   
   //background.loop();
 }
@@ -46,6 +51,7 @@ void draw() {
    text(lines[i], 0, 36 + (i * 36));
  }
 
+  touch_manager.update();
   for(SoundBox sb : sound_boxes){
    sb.update(); 
   } 
